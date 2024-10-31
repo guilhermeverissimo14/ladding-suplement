@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel com Thumbnails</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header top-0 w-100  position-fixed">
+        <h1 class="text-center text-white">Carrossel com Thumbnails</h1>
+    </header>
+
+    <section id="heroCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1721750802653-8258546537-dd30fe8f361fc76fd9c9411e9db7d2b41721750804-1920-1920.webp?279779495"
+                    class="d-block w-100" alt="1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1728572506842-945786670-9e709fe1f82f1d8f5650207aadb3fbe41728572508-1920-1920.webp?279779495"
+                    class="d-block w-100" alt="2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1728571208080-4930887519-8c892ab20db2afa501a7ba07c758cc9f1728571208-1920-1920.webp?279779495"
+                    class="d-block w-100" alt="3">
+            </div>
+
+            <div class="position-absolute w-100 d-flex align-items-center justify-content-center bottom-0 mb-3">
+                <button class="thumbnail me-2 active" onclick="changeSlide(0)" aria-label="Thumbnail 1">
+                    <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1721750802653-8258546537-dd30fe8f361fc76fd9c9411e9db7d2b41721750804-1920-1920.webp?279779495"
+                        alt="Thumbnail 1">
+                </button>
+                <button class="thumbnail me-2" onclick="changeSlide(1)" aria-label="Thumbnail 2">
+                    <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1728572506842-945786670-9e709fe1f82f1d8f5650207aadb3fbe41728572508-1920-1920.webp?279779495"
+                        alt="Thumbnail 2">
+                </button>
+                <button class="thumbnail" onclick="changeSlide(2)" aria-label="Thumbnail 3">
+                    <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-slide-1728571208080-4930887519-8c892ab20db2afa501a7ba07c758cc9f1728571208-1920-1920.webp?279779495"
+                        alt="Thumbnail 3">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="title-product text-center p-5 fw-bold">Sobre o nosso produto</h1>
+
+    <section>
+
+        <div>
+            <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-img-1529067934-1724976115-5b8ba23e9af7fce8a97ccc5ee2f59d0c1724976115-480-0.webp?279779495"
+                alt="Produto">
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/script/script.js"></script>
+
+</body>
+
+</html>

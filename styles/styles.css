@@ -1,0 +1,46 @@
+body {
+    font-family: "Montserrat", Sans-serif;
+}
+
+.header {
+    margin: 0;
+    background-color: #2a442b;
+    height: 80px;
+}
+
+.carousel {
+    margin-top: 80px;
+}
+
+.carousel-item img {
+    height: 400px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    border: transparent;
+    border-radius: 10px;
+    padding: 0;
+
+    &:hover {
+        opacity: 1;
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.thumbnail img {
+    width: 80px;
+    height: 80px;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+}
+
+.title-product {
+    color: #2a442b;
+}
