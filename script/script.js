@@ -158,3 +158,23 @@ function startCountdown() {
 }
 
 startCountdown();
+
+
+document.querySelectorAll('.comprar-btn').forEach(button => {
+    button.addEventListener('click', function () {
+
+        const productCard = button.closest('#product');
+
+
+        const nameProduct = productCard.querySelector('.card-title').textContent;
+        const priceProduct = productCard.querySelector('.card-text').textContent;
+
+
+        const numberWhatsApp = '5533998527687';
+        const message = `Olá! Gostaria de comprar o produto: ${nameProduct} no valor de ${priceProduct}`;
+        const linkWhatsApp = `https://wa.me/${numberWhatsApp}?text=${encodeURIComponent(message)}`;
+
+        // Abre o link do WhatsApp
+        window.open(linkWhatsApp, '_blank');
+    });
+});
