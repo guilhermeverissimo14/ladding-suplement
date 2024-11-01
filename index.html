@@ -11,8 +11,49 @@
 
 <body>
 
-    <header class="header top-0 w-100 z-3  position-fixed d-flex align-items-center justify-content-start">
-        <h1 class="text-center text-white fw-bold">VITTA</h1>
+    <!-- modal -->
+    <div class="modal fade show" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-modal="true"
+        style="display: block;">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white" id="customModalLabel">Bem-vindo ao Nosso Site! OFERTAS E
+                        NOVIDADES ⚠</h5>
+                    <button type="button" class="btn-close bg-danger" aria-label="Fechar"
+                        onclick="closeModal()"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white mb-3">Inscreva-se agora para ter acesso antecipado dos lançamentos e granta
+                        descontos exclusivos</p>
+
+                    <div id="lead-form" class="container">
+                        <form id="leadCaptureForm">
+                            <div class="mb-3">
+                                <label class="text-white" for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-white" for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-white" for="phone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="(99) 99999-9999"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn-register w-100">Inscreva-se </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header top-0 w-100 z-3  position-fixed d-flex align-items-center justify-content-evenly">
+        <h1 class="text-center d-none d-md-block text-white fw-bold">VITTA</h1>
+        <div id="product-page" style="display: none;">
+            <h4 class="text-white" id="welcomeMessage" aria-live="polite">Bem-vindo!</h4>
+        </div>
     </header>
 
     <section id="heroCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
@@ -50,15 +91,15 @@
 
     <h1 class="title-product text-center p-5 fw-bold">Sobre o nosso produto</h1>
 
-    <section class="d-flex flex-wrap justify-content-center align-items-center w-100 p-2">
+    <section class="content-product m-3 d-flex flex-wrap justify-content-center align-items-center rounded-3 p-2">
 
         <div class="col-md-6 col-sm-12 m-0 mb-3 d-flex justify-content-center">
             <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-img-1529067934-1724976115-5b8ba23e9af7fce8a97ccc5ee2f59d0c1724976115-480-0.webp?279779495"
-                alt="Produto" class="img-fluid rounded-3" style="max-height: 400px;">
+                alt="Produto" class="img-fluid rounded-3" style="max-height: 300px;">
         </div>
 
-        <div class="col-md-6 col-sm-12 text-center text-md-start">
-            <p>
+        <div class="col-md-6 col-sm-12 pe-md-5 text-center text-md-start">
+            <p class="fw-semibold text-left">
                 Vitta é um suplemento de alta qualidade desenvolvido para fornecer uma fonte rica e concentrada de
                 ácidos graxos ômega-3, fundamentais para a saúde do coração, do cérebro e das articulações. Nossa
                 fórmula avançada é produzida a partir de ingredientes puros e cuidadosamente selecionados, garantindo
@@ -71,10 +112,16 @@
     </section>
 
 
-    <div class="m-5">
-        <div class="row">
+    <section id="countdown" class="container mt-5">
+        <h2>Promoção termina em:</h2>
+        <div id="countdownTimer" class="countdown-timer">00:00</div>
+        <a href="#product" class="cta-button">Aproveite Agora</a>
+    </section>
 
-            <div class="card col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#imageModal">
+
+    <section class="m-5">
+        <div class="row">
+            <div id="product" class="card col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#imageModal">
                 <img src="https://acdn.mitiendanube.com/stores/004/517/888/themes/amazonas/2-img-1529067934-1724976115-5b8ba23e9af7fce8a97ccc5ee2f59d0c1724976115-480-0.webp?279779495"
                     class="card-img-top p-0" alt="Product">
                 <div class="card-body">
@@ -88,7 +135,7 @@
                     class="card-img-top" alt="Product">
                 <div class="card-body">
                     <h5 class="card-title">Vitta B</h5>
-                    <p class="card-text">R$ 99,99</p>
+                    <p class="card-text">R$ 39,99</p>
                 </div>
             </div>
 
@@ -97,7 +144,7 @@
                     class="card-img-top" alt="Product">
                 <div class="card-body">
                     <h5 class="card-title">Mag Vitta</h5>
-                    <p class="card-text">R$ 99,99</p>
+                    <p class="card-text">R$ 59,99</p>
                 </div>
             </div>
 
@@ -119,7 +166,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <section id="testimonials" class="container my-5">
         <h4 class="pb-5 fw-semibold">Veja alguns depoimentos de alguns dos nossos clientes</h4>
@@ -128,7 +176,7 @@
             <button onclick="prevTestimonial()">&#10094;</button>
 
             <div>
-                <img src="/assets/images/nopicture.webp" alt="">
+                <img class="mb-3" src="/assets/images/nopicture.webp" alt="">
 
 
                 <div class="testimonial-slider" id="testimonialSlider">
@@ -155,7 +203,17 @@
 
 
     <footer class="p-5 ">
-        <h5 class="text-white text-center">©Todos os direitos reservados</h5>
+        <div class=" d-flex flex-column align-items-center mt-5">
+            <p class="text-white">&copy; 2024 - Nossa Loja VITTA</p>
+            <div class="social-links">
+                <a class="text-white" href="#">Facebook</a>
+                <a class="text-white" href="#">Instagram</a>
+                <a class="text-white" href="#">Twitter</a>
+            </div>
+            <div class="policy-links">
+                <a class="text-white" href="#">Política de Privacidade</a>
+            </div>
+        </div>
     </footer>
 
 

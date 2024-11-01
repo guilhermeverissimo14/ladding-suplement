@@ -2,6 +2,25 @@ body {
     font-family: "Montserrat", Sans-serif;
 }
 
+.modal-content {
+    background-color: #2a442b;
+}
+
+.btn-register {
+    background-color: white;
+    border: transparent;
+    padding: 10px;
+    font-size: 18px;
+    color: #2a442b;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.btn-register:hover {
+    background-color: #eee7e7;
+}
+
+
 .header {
     margin: 0;
     background-color: #2a442b;
@@ -46,6 +65,10 @@ body {
     color: #2a442b;
 }
 
+.content-product {
+    border: #3e6b3f 2px solid;
+}
+
 .card {
     cursor: pointer;
 
@@ -54,6 +77,33 @@ body {
         transform: translateY(-5px);
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     }
+}
+
+#countdown {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.countdown-timer {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #d9534f;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #218838;
 }
 
 #testimonials {
@@ -89,7 +139,7 @@ body {
 }
 
 #testimonials button {
-    background-color: #820d0d;
+    background-color: #2a442b;
     color: #fff;
     border: none;
     width: 50px;
@@ -106,4 +156,16 @@ body {
 
 footer {
     background-color: #20232C;
+}
+
+.social-links a,
+.policy-links a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links a:hover,
+.policy-links a:hover {
+    color: #007bff;
 }
