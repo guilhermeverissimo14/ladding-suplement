@@ -34,7 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email").value;
 
         if (!validateEmail(email)) {
-            alert("Por favor, insira um e-mail válido.");
+            Toastify({
+                text: "Por favor, insira um e-mail válido.",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                    background: "#ef4444",
+                },
+            }).showToast();
+
             return;
         }
 
@@ -43,6 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
             : `Bem-vindo, ${name}!`;
         leadFormSection.style.display = "none";
         productPage.style.display = "block";
+
+
+        Toastify({
+            text: "Cadastro realizado com sucesso!",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+                background: "#28a745",
+            },
+        }).showToast();
 
         closeModal();
     });
